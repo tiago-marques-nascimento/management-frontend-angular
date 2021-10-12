@@ -1,0 +1,29 @@
+<div class="line">
+    <div class="row" style="width:100%;">
+        User
+    </div>
+</div>
+<hr/>
+<div class="line">
+    <div class="row" style="width:100%;">
+        <input type="text" placeholder="Name" maxlength="100" [(ngModel)]="user.name" [disabled]="view">
+    </div>
+</div>
+<div class="line">
+    <div class="row" style="width:50%;">
+        <input type="text" placeholder="Password" type="password" maxlength="100" [(ngModel)]="user.password" [disabled]="view">
+    </div>
+</div>
+<div class="line">
+    <div id="user-checkboxes" class="row" style="width:100%;">
+        <app-checkbox [multipleSelection]="true" [options]="roleCheckboxLabels" [(ngModel)]="roleCheckboxes" [disabled]="view"></app-checkbox>
+    </div>
+</div>
+<div class="line" id="user-buttons">
+    <div class="row" style="width:8%;" *ngIf="!view">
+        <button id="user-confirm-button" (click)="confirm()"><i class="fas fa-thumbs-up"></i> Confirm</button>
+    </div>
+    <div class="row" style="width:8%;">
+        <button id="user-return-button" (click)="cancel()"><i class="fas fa-thumbs-down"></i> Return</button>
+    </div>
+</div>

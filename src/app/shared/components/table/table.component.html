@@ -1,0 +1,18 @@
+<div class="table">
+    <div class="line table-head">
+        <div *ngFor="let column of columns" class="row" [ngStyle]="{'width':column.length}">
+            {{column.label}}
+        </div>
+        <div class="row">Actions</div>
+    </div>
+    <div *ngFor="let item of list; let i = index" [class]="'line ' + ((i%2==0) ? 'table-body-highlight' : 'table-body-no-highlight')">
+        <div *ngFor="let column of columns" class="row" [ngStyle]="{'width':column.length}">
+            {{item[column.value]}}
+        </div>
+        <div class="row">
+            <a class="table-button-view" (click)="triggerView(item)"><i class="fas fa-eye"></i></a>
+            <a class="table-button-edit" (click)="triggerEdit(item)"><i class="fas fa-edit"></i></a>
+            <a class="table-button-remove" (click)="beforeRemove(item)"><i class="fas fa-trash"></i></a>
+        </div>
+    </div>
+</div>

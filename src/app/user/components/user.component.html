@@ -1,0 +1,21 @@
+<div class="line">
+    <div class="row" style="width:100%;">
+        Available Users
+    </div>
+</div>
+<hr/>
+<div class="line">
+    <div class="row" style="width:100%;">
+        <button (click)="orderUsersByName()"><i class="fas fa-search"></i> Order users by name</button>
+    </div>
+</div>
+<div class="line" id='users-table'>
+    <div class="row" style="width:100%;">
+        <app-table [columns]="userColumns" [list]="users" [view]="viewUser" [edit]="editUser" [remove]="removeUser"></app-table>
+    </div>
+</div>
+<div class="line">
+    <div class="row" style="width:100%;">
+        <button (click)="addUser()"><i class="fas fa-plus"></i> New user</button>
+    </div>
+</div>

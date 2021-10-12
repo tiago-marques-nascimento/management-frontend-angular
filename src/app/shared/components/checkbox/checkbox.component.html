@@ -1,0 +1,24 @@
+<div class="checkbox" *ngIf="multipleSelection && value">
+    <span *ngFor="let option of options; let i = index">
+        <a *ngIf="value[i]" (click)="deselect(i)"><i class="fas fa-check-square"></i></a>
+        <a *ngIf="!value[i]" (click)="select(i)"><i class="far fa-square"></i></a>
+        <span *ngIf="option.label">
+            {{option.label}}
+        </span>
+        <span *ngIf="option.image">
+            <img [src]="option.image">
+        </span>
+    </span>
+</div>
+<div class="checkbox" *ngIf="!multipleSelection && value">
+    <span *ngFor="let option of options; let i = index">
+        <a *ngIf="value[i]"><i class="fas fa-dot-circle"></i></a>
+        <a *ngIf="!value[i]" (click)="select(i)"><i class="far fa-circle"></i></a>
+        <span *ngIf="option.label">
+            {{option.label}}
+        </span>
+        <span *ngIf="option.image">
+            <img [src]="option.image">
+        </span>
+    </span>
+</div>

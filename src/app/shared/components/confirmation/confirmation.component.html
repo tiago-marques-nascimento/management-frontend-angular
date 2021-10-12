@@ -1,0 +1,9 @@
+<div class="confirmation-background" *ngIf="visible">
+    <div class="confirmation-dialog">
+        <div class="confirmation-title">Do you confirm this action?</div>
+        <div class="confirmation-options">
+            <button class="confirmation-option-yes" (click)="yes()">Yes</button>
+            <button class="confirmation-option-no" (click)="no()">No</button>
+        </div>
+    </div>
+</div>

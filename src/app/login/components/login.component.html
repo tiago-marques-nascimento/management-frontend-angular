@@ -1,0 +1,20 @@
+<div class="line">
+    <div class="row" style="width:100%;">
+        Login
+    </div>
+</div>
+<div class="line">
+    <div class="row" style="width:30%;">
+        <input type="text" placeholder="Name" maxlength="100" [(ngModel)]="login.name">
+    </div>
+</div>
+<div class="line">
+    <div class="row" style="width:30%;">
+        <input type="text" placeholder="Password" type="password" maxlength="100" [(ngModel)]="login.password">
+    </div>
+</div>
+<div class="line">
+    <div class="row" style="width:8%;">
+        <button (click)="loginAction()"><i class="fas fa-thumbs-up"></i> Login</button>
+    </div>
+</div>
